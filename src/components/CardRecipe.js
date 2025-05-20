@@ -1,19 +1,27 @@
-import { View, Text, StyleSheet, Image } from "react-native"
+import { useNavigation } from "@react-navigation/native"
+import { View, Text, StyleSheet, Image , TouchableOpacity} from "react-native"
 
-export function CardRecipe ({name, urlImage, description}) {
+export function CardRecipe ({recipe}) {
+
+    const navigation = useNavigation()
+
+    const handlePress = () => {
+        navigation.navigate('details', {recipe : recipe})
+    }
+
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={handlePress}>
             <Image 
-                source={urlImage ? urlImage : require('../../assets/images/unknow.jpg')} 
+                source={recipe.urlImage ? recipe.urlImage : require('../../assets/images/unknow.jpg')} 
                 style={styles.image} 
             />
 
             <View style={styles.containerText}>
-                <Text style={styles.title}>{name}</Text>
-                <Text style={styles.description}>{description}</Text>
+                <Text style={styles.title}>{recipe.nome}</Text>
+                <Text style={styles.description}>{recipe.descricao}</Text>
             </View>
 
-        </View>
+        </TouchableOpacity>
     )
 }
 
