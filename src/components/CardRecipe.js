@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/native"
-import { View, Text, StyleSheet, Image , TouchableOpacity} from "react-native"
+import { View, Text, Image , TouchableOpacity} from "react-native"
+import { StyleSheet } from "react-native"
 
 export function CardRecipe ({recipe}) {
 

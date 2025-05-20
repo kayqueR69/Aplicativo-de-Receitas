@@ -1,6 +1,7 @@
-import { TouchableOpacity, View, Text, StyleSheet } from "react-native"
+import { TouchableOpacity, View, Text } from "react-native"
 import { MaterialIcons as Icone } from "@expo/vector-icons"
 import { useNavigation } from "@react-navigation/native"
+import { StyleSheet } from "react-native"
 
 export function CategorieButton ({iconName, nameCategorie, categorie}) {
 

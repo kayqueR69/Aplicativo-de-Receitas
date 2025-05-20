@@ -5,14 +5,16 @@ export const styles = StyleSheet.create({
         flex : 1,
         alignItems : 'center',
         backgroundColor : '#FFF',
-        paddingInline : 40
+        paddingVertical : 50,
+        paddingLeft : 40,
+        paddingRight : 40
     },
     header : {
         width : '100%',
         height : 70,
         display : 'flex',
         alignItems : 'center',
-        flexDirection : "row"
+        flexDirection : "row",
     },
     title : {
         color : 'red',

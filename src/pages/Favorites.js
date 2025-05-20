@@ -5,6 +5,7 @@ import { FontAwesome as Icone } from "@expo/vector-icons"
 import { useEffect, useState } from "react"
 import { recipes } from "../../data/recipes"
 import { CardRecipe } from "../components/CardRecipe"
+import { SafeAreaView } from "react-native"
 
 export function Favorites () {
 
@@ -31,7 +32,7 @@ export function Favorites () {
     }, [])
 
     return (    
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             <View style={styles.header}>
                 <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
                     <Icone name="arrow-left" size={30} color={'#000'}/>
@@ -41,8 +42,8 @@ export function Favorites () {
             <FlatList
                 keyExtractor={(item) => item.id}
                 data={listaRecipes}
-                renderItem={({item}) => <CardRecipe recipe={item}/>}
+                renderItem={({item}) => (<CardRecipe recipe={item}/>)}
             />
-        </View>
+        </SafeAreaView>
     )
 }

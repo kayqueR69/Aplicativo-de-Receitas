@@ -1,7 +1,8 @@
-import { View, Text, TouchableOpacity } from "react-native"
+import { View, Text } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import { styles } from "../styles/styles"
 import { CategorieButton } from "../components/CategorieButton"
+import { SafeAreaView } from "react-native"
 
 export function Home () {
     
@@ -12,7 +13,7 @@ export function Home () {
     }
 
     return (
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             
             <View style={styles.header}>
                 <Text style={styles.title}>Categorias</Text>
@@ -22,6 +23,6 @@ export function Home () {
             <CategorieButton iconName='brunch-dining' categorie='Almoço' nameCategorie='almoco'/>
             <CategorieButton iconName='dinner-dining' categorie='Jantar' nameCategorie='jantar' />
 
-        </View>
+        </SafeAreaView>
     )
 }

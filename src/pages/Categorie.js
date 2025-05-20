@@ -1,11 +1,10 @@
 import { useNavigation } from "@react-navigation/native"
-import { View, Text, TouchableOpacity } from "react-native"
+import { View, Text, TouchableOpacity, SafeAreaView, FlatList } from "react-native"
 import { styles } from "../styles/styles"
 import { FontAwesome as Icone } from "@expo/vector-icons"
 import { CardRecipe } from "../components/CardRecipe"
 import { recipes } from "../../data/recipes"
 import { useState } from "react"
-import { FlatList } from "react-native-web"
 
 export function Categorie ({ route }) {
 
@@ -27,7 +26,7 @@ export function Categorie ({ route }) {
     })
 
     return (
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             <View style={styles.header}>
 
                 <TouchableOpacity style={styles.backButton} onPress={handlePress}>
@@ -42,13 +41,13 @@ export function Categorie ({ route }) {
                 <FlatList
                     keyExtractor={(item) => item.id}
                     data={listaRecipes}
-                    renderItem={({item}) => <CardRecipe recipe={item}/>}
+                    renderItem={({item}) => (<CardRecipe recipe={item}/>)}
                 />
             ) : (
                 <View>
                     <Text>Não a nenhuma receita nesta categoria</Text>
                 </View>
             )} 
-        </View>
+        </SafeAreaView>
     )
 }

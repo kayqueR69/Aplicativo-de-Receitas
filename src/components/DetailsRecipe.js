@@ -1,14 +1,15 @@
-import { View, Text, FlatList, StyleSheet } from "react-native"
+import { View, Text, FlatList } from "react-native"
+import { StyleSheet } from "react-native"
 
 export function DetailsRecipe ({ingredientes, modoPrepararo}) {
     return (
         <View>
             <Text style={styles.title}>Ingredientes</Text>
-            <FlatList 
-                keyExtractor={(item) => item.id}
-                data={ingredientes}
-                renderItem={({item}) => <Ingrediente ingrediente={item}/>}
-            />
+
+            {ingredientes ? ingredientes.map((item, key) => {
+                return <Ingrediente key={key} ingrediente={item}/>
+            }) : () => {return <Text>Falha</Text>}}
+
             <Text style={styles.title}>Modo de Preparo</Text>
             <Text>{modoPrepararo}</Text>
         </View>

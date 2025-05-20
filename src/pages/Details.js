@@ -1,9 +1,11 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native"
+import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native"
 import { styles } from "../styles/styles"
 import { DetailsRecipe } from "../components/DetailsRecipe"
 import { FontAwesome as Icone } from "@expo/vector-icons"
 import { useNavigation } from "@react-navigation/native"
 import { useState } from "react"
+import { StyleSheet } from "react-native"
+import { SafeAreaView } from "react-native"
 
 export function Details ({route}) {
 
@@ -19,7 +21,7 @@ export function Details ({route}) {
 
     return (
         
-        <View style={styles.page}>
+        <SafeAreaView style={styles.page}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 
                 <Text style={localStyle.title} >{recipe.nome}</Text>
@@ -41,7 +43,7 @@ export function Details ({route}) {
                 </View>
 
             </ScrollView>
-        </View>
+        </SafeAreaView>
     )    
 }
 
