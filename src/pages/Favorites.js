@@ -14,13 +14,19 @@ export function Favorites () {
 
     useEffect(() => {
         for (let c = 0; c < recipes.cafe.length; c++) {
-            listaRecipes.push(recipes.cafe[c])
+            if (recipes.cafe[c].isFavorito) {
+                listaRecipes.push(recipes.cafe[c])
+            }
         }
         for (let c = 0; c < recipes.almoco.length; c++) {
-            listaRecipes.push(recipes.almoco[c])
+            if (recipes.almoco[c].isFavorito) {
+                listaRecipes.push(recipes.almoco[c])
+            }
         }
         for (let c = 0; c < recipes.jantar.length; c++) {
-            listaRecipes.push(recipes.jantar[c])
+            if (recipes.jantar[c].isFavorito) {
+                listaRecipes.push(recipes.jantar[c])
+            }
         }
     }, [])
 
