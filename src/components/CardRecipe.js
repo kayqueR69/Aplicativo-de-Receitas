@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         height : 110,
         flexDirection : 'row',
         alignItems : 'center',
-        gap : '1em'
+        gap : 15
     },
     image : {
         height : 100,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     title : {
         fontWeight : 'bold',
-        fontSize : '1em'
+        fontSize : 15
     },
     description : {
         display : 'flex',

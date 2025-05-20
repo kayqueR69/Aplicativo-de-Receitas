@@ -47,9 +47,9 @@ export function Details ({route}) {
 
 const localStyle = StyleSheet.create({
     title : {
-        fontSize : '1.7em',
+        fontSize : 25,
         fontWeight : 'bold',
-        marginBlock : '.7em'
+        marginBlock : 17
     },
     image : {
         width : '100%',
@@ -57,7 +57,7 @@ const localStyle = StyleSheet.create({
     },
     containerButtons : {
         flexDirection : 'row',
-        marginBlock : '1em',
+        marginBlock : 25,
         justifyContent : 'space-between',
         width : '100%'
     }

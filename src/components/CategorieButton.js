@@ -30,13 +30,13 @@ const styles = StyleSheet.create({
         backgroundColor : 'red',
         flexDirection : 'row',
         alignItems : 'center',
-        paddingInline : '1.9em',
-        gap : '1.5em',
-        marginBlock : '1em'
+        paddingInline : 19,
+        gap : 15,
+        marginBlock : 15
     },
     textCategorie : {
         color : '#fff',
-        fontSize : '1.5em',
+        fontSize : 22,
         fontWeight : 'bold'
     }
 })

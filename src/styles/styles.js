@@ -5,24 +5,24 @@ export const styles = StyleSheet.create({
         flex : 1,
         alignItems : 'center',
         backgroundColor : '#FFF',
-        paddingInline : '2.5em'
+        paddingInline : 40
     },
     header : {
         width : '100%',
-        height : '70px',
+        height : 70,
         display : 'flex',
         alignItems : 'center',
         flexDirection : "row"
     },
     title : {
         color : 'red',
-        fontSize : '2em',
+        fontSize : 30,
         fontWeight : 'bold',
     },
     backButton : {
         height : 40,
         width : 40,
-        marginRight : '1em',
+        marginRight : 25,
         borderWidth : 1,
         borderStyle : 'solid',
         borderColor : 'black',

@@ -27,8 +27,8 @@ function Ingrediente ({ingrediente}) {
 const styles = StyleSheet.create({
     title : {
         fontWeight : 'bold',
-        fontSize : '1.5em',
-        marginBlock : '.7em'
+        fontSize : 19,
+        marginBlock : 17
     },
     ingrediente : {
         flexDirection : 'row'
