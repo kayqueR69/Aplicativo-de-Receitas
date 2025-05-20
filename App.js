@@ -1,18 +1,16 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home } from "./src/pages/Home";
-import { Favorites } from "./src/pages/Favorites";
-const Tab  = createBottomTabNavigator();
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const Nav = createNativeStackNavigator()
+import TabRoutes from "./src/routes/TabRoutes";
+import { Categorie } from "./src/pages/Categorie";
 
 export default function App() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
-                
-                <Tab.Screen name="home" component={Home}/>
-                <Tab.Screen name="favorites" component={Favorites}/>
-
-            </Tab.Navigator>    
+            <Nav.Navigator screenOptions={{headerShown : false}}>
+                <Nav.Screen name="index" component={TabRoutes}/>
+                <Nav.Screen name="categorie" component={Categorie}/>
+            </Nav.Navigator>
         </NavigationContainer>
     );
 }
